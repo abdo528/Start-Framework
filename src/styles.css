@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+.pad {
+    padding-top: 72px;
+}
+
+.line {
+    display: inline-block;
+    width: 60px;
+    height: 2px;
+    background-color: black;
+    margin-inline: auto;
+}

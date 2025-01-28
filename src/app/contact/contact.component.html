@@ -1,0 +1,29 @@
+<section class="pad">
+    <div class="text-center py-5">
+        <h2>CONATCT SECTION</h2>
+        <div class="line"></div>
+        <i class="fa-solid fa-star mx-3"></i>
+        <div class="line"></div>
+    </div>
+    <div class="w-50 m-auto d-flex flex-column py-5">
+        <label for="Name" [class.top]="!userName" class="text-success opacity-1 position-relative top-0">User Name :
+        </label>
+        <input type="text" id="Name" placeholder="User Name" class="my-2 p-2 rounded border-0 border-bottom focus-ring"
+            [(ngModel)]="userName">
+        <label for="Age" class="text-success opacity-1 position-relative top-0" [class.top]="!userAge">User Age :
+        </label>
+        <input type="number" id="Age" placeholder="User Age" class="my-2 p-2 rounded border-0 border-bottom focus-ring"
+            [(ngModel)]="userAge">
+        <label for="Email" class="text-success opacity-1 position-relative top-0" [class.top]="!userEmail">User Email :
+        </label>
+        <input type="email" id="Email" placeholder="User Email"
+            class="my-2  p-2 rounded border-0 border-bottom focus-ring" [(ngModel)]="userEmail">
+        <label for="Password" class="text-success opacity-1 position-relative top-0" [class.top]="!userPassword">User
+            Password : </label>
+        <input type="password" id="Password" placeholder="User Password"
+            class="my-2 p-2 rounded border-0 border-bottom focus-ring" [(ngModel)]="userPassword">
+        <div>
+            <button class="my-2 btn btn-success">Send Message</button>
+        </div>
+    </div>
+</section>

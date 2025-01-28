@@ -1,0 +1,9 @@
+.focus-ring:focus {
+    box-shadow: none;
+}
+
+.top {
+    transition: all 1s;
+    top: 40px !important;
+    opacity: 0 !important;
+}

@@ -1,0 +1,36 @@
+<section class="pad">
+    <div class="text-center py-3">
+        <h2>PORTFOLIO COMPONENT</h2>
+        <div class="line"></div>
+        <i class="fa-solid fa-star mx-3"></i>
+        <div class="line"></div>
+    </div>
+    <div class="container">
+        <div class="row g-3 p-3">
+            @for (item of items; track $index) {
+            <div class="col-md-4">
+                <div class="position-relative">
+                    <img [src]="item" class="img-fluid rounded" [alt]="item">
+                    <div class="position-absolute top-0 rounded text-white fa-5x bg-success w-100 h-100 d-flex justify-content-center align-items-center layer"
+                        (click)="toogleLayer();modelImage = item">
+                        <i class="fa-solid fa-plus"></i>
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+        <div [class.d-none]="layer" class="position-fixed top-0 bottom-0 start-0 end-0 bg-primary bg-opacity-25"
+            (click)="layer = !layer">
+            <div class="position-relative top-50 start-50 translate-middle w-25">
+                <img [src]="modelImage" class="img-fluid" [alt]="modelImage" (click)="stopProp($event)">
+                <div class="d-flex justify-content-between position-absolute top-50 w-100 text-success">
+                    <i class="fa-solid fa-circle-left fa-xl" (click)="previousImg();stopProp($event)"></i>
+                    <i class="fa-solid fa-circle-right fa-xl" (click)="nextImg();stopProp($event)"></i>
+                </div>
+                <div class=" d-flex justify-content-end position-absolute top-0 w-100 text-success mt-3">
+                    <i class="fa-solid fa-circle-xmark fa-xl" (click)="closeImg();stopProp($event)"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
