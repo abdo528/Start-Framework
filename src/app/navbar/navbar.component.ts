@@ -12,7 +12,7 @@ export class NavbarComponent {
 
   @HostListener('window:scroll', [])
   onWindowScroll(): void {
-    const scrollOffset = document.documentElement.scrollTop || document.body.scrollTop || 0;
+    const scrollOffset = document.documentElement.scrollTop || document.body.scrollTop || 0 || window.scrollY;
     this.isScrolled = scrollOffset > 10;
   }
 }
